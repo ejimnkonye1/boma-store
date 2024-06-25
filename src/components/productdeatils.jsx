@@ -13,13 +13,14 @@ console.log(allproducts, id);
   if (!product) {
     return <div>Product not found!</div>;
   }
+  
 
   
 
   return (
     <div className="container mt-4">
       <div className="card">
-        <div className="row no-gutters">
+        <div className="row ">
           <div className="col-md-4">
             <img src={product.image} className="card-img" alt={product.description} />
           </div>
