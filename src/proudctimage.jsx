@@ -1,4 +1,4 @@
-[
+const products = [
   {
     "image_url": "image/PHOTO-2024-04-26-06-39-15 2.jpg",
     "description": "Bead",
@@ -53,6 +53,8 @@
     "image_url": "public/image/PHOTO-2024-05-07-11-16-43.jpg",
     "description": "Female necklace",
     "price": "3,500"
-  },
+  }
  
 ]
+
+export default products;
