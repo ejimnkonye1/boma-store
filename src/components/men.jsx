@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import products from '../proudctimage'; // Check the spelling here, should it be 'productimage'?
-
-const ProductList = () => {
+import menproducts from '../menimage';
+const MenList = () => {
   return (
     <div className="container">
       <h6 className='mt-4 mb-4'>FEATURED PRODUCTS</h6>
       <div className="row">
-        {products.map((pro, index) => (
+        {menproducts.map((pro, index) => (
           <div className="col-md-3 col-sm-6 mb-4" key={index}>
             <div className="card">
               <Link to={`/details/${pro.id}`}> {/* Corrected link to details */}
@@ -25,4 +24,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default MenList;
