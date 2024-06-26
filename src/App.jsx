@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import { Footer } from './components/footer'
 import { Head } from './components/header'
@@ -19,8 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<ProductList />} />
           <Route path='/men' element={<MenList />} />
-          <Route path='/details/:id' element={<Deatils />} />
-          <Route path='/ProductPage/:id' element={<ProductPage />} />
+          <Route path='/details/:id' element={<ProductPage />} />
+          {/* <Route path='/ProductPage/:id' element={<ProductPage />} /> */}
         </Routes>
       </Router>
 
