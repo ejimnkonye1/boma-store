@@ -1,0 +1,39 @@
+.go-search{
+    width: 30px;
+    height: 30px;
+}
+.cartout{
+    width: 30px;
+    height: 30px;
+}
+/* .cart-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 10%;
+    color: white !important;
+    padding: 10px;
+}
+.count{
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.carticon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: red; /* Change this to your preferred color */
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 9px;
+  }
