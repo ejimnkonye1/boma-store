@@ -11,7 +11,7 @@ function ProductPage() {
         {" "}
         <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
           {" "}
-          {images.map((img, index) => (
+          {image.map((img, index) => (
             <div key={index}>
               {" "}
               <img src={img.image_url} alt={img.description} />{" "}
