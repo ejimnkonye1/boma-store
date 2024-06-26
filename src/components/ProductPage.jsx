@@ -1,9 +1,25 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-undef */
-import React from "react";
+import React,{useState} from "react";
 import "../css/ProductPage.css";
-
+import { useParams } from "react-router-dom";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import products from "../proudctimage"; 
+import menproducts from "../menimage";
 function ProductPage() {
+  const { id } = useParams();
+  const allproducts = [...products, ...menproducts]
+  // Find the product by id
+const product = allproducts[Number(id)]
+console.log(allproducts, id);
+
+  if (!product) {
+    return <div>Product not found!</div>;
+  }
+  const [quantity, setQuantity] = useState(1);
+  const images = product.image || [];
+
   return (
     <div className="product-page">
       {" "}
@@ -11,12 +27,17 @@ function ProductPage() {
         {" "}
         <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
           {" "}
+<<<<<<< HEAD
           {image.map((img, index) => (
             <div key={index}>
+=======
+          
+            <div >
+>>>>>>> 8b8fba4d8c40dbfa3c8140080f61c1cd05793892
               {" "}
-              <img src={img.image_url} alt={img.description} />{" "}
+              <img src={images} alt={images.description} />{" "}
             </div>
-          ))}{" "}
+          {" "}
         </Carousel>{" "}
       </div>{" "}
       <div className="product-info">
