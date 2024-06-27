@@ -38,14 +38,14 @@ setCartItem(storeditem)
     
                           <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
                             <p><strong>{item.description}</strong></p>
-                            <button type="button" className="btn btn-primary btn-sm me-1 mb-2" data-mdb-button-init data-mdb-ripple-init data-mdb-tooltip-init title="Remove item">
+                            <button type="button" className="btn btn-outline-danger btn-sm me-1 mb-2" data-mdb-button-init data-mdb-ripple-init data-mdb-tooltip-init title="Remove item">
                               <AiOutlineDelete />
                             </button>
                           </div>
     
                           <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                             <div className="d-flex mb-4" style={{ maxWidth: '200px' }}>
-                              <button className="btn btn-primary px-3 me-2" data-mdb-button-init data-mdb-ripple-init onClick={(e) => { e.target.parentNode.querySelector('input[type=number]').stepDown(); }}>
+                              <button className="btn btn-outline-secondary px-3 me-2" data-mdb-button-init data-mdb-ripple-init onClick={(e) => { e.target.parentNode.querySelector('input[type=number]').stepDown(); }}>
                                 <FiMinus />
                               </button>
     
@@ -54,7 +54,7 @@ setCartItem(storeditem)
                                 <label className="form-label" htmlFor={`form-${index}`}>Quantity</label>
                               </div>
     
-                              <button className="btn btn-primary px-3 ms-2" data-mdb-button-init data-mdb-ripple-init onClick={(e) => { e.target.parentNode.querySelector('input[type=number]').stepUp(); }}>
+                              <button className="btn btn-outline-secondary px-3 ms-2" data-mdb-button-init data-mdb-ripple-init onClick={(e) => { e.target.parentNode.querySelector('input[type=number]').stepUp(); }}>
                                 <FiPlus />
                               </button>
                             </div>
@@ -114,7 +114,7 @@ setCartItem(storeditem)
                       </li>
                     </ul>
     
-                    <button type="button" className="btn btn-primary btn-lg btn-block" data-mdb-button-init data-mdb-ripple-init>
+                    <button type="button" className="btn btn-outline-success btn-lg btn-block" data-mdb-button-init data-mdb-ripple-init>
                       Go to checkout
                     </button>
                   </div>
