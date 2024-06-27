@@ -7,18 +7,36 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import products from "../proudctimage"; 
 import menproducts from "../menimage";
-function ProductPage() {
+import { useNavigate } from "react-router-dom";
+function ProductPage({cartItem, setCartItem}) {
   const { id } = useParams();
+  const [quantity, setQuantity] = useState(1);
+
   const allproducts = [...products, ...menproducts]
   // Find the product by id
 const product = allproducts[Number(id)]
 console.log(allproducts, id);
 
+const images = product.image || [];
   if (!product) {
     return <div>Product not found!</div>;
   }
-  const [quantity, setQuantity] = useState(1);
-  const images = product.image || [];
+  const Navigate = useNavigate()
+  const handleAddToCart = () => {
+    //check is product exist
+    const existingproduct = cartItem.find((item)=> item.name === product.price)
+    if (existingproduct){
+      // if product in cart increase it quantity by 1
+      existingproduct.quantity += 1
+      setCartItem([...cartItem])
+    }else{
+      // add product to cary
+      product.quantity = 1
+      setCartItem([...cartItem,product])
+      console.log(cartItem)
+    }
+    Navigate('/cart')
+  }
 
   return (
     <div className="product-page">
@@ -56,6 +74,7 @@ console.log(allproducts, id);
         type="button" data-bs-toggle="offcanvas" 
         data-bs-target="#offcanvasRight" 
         aria-controls="offcanvasRight"
+        onClick={() => handleAddToCart(product)}
         >Add to Cart</button>{" "}
       </div>{" "}
     
@@ -67,6 +86,12 @@ console.log(allproducts, id);
   </div>
   <div class="offcanvas-body">
     ...
+    {cartItem.map((item) => (
+      <div>
+      <p>{item.price}</p>
+      <p>{item.description}</p>
+      </div>
+    ))}
   </div>
 </div>
 
