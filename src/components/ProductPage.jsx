@@ -45,8 +45,13 @@ const images = product.image || [];
         {" "}
         <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
           {" "}
+<<<<<<< HEAD
+          {image.map((img, index) => (
+            <div key={index}>
+=======
           
             <div >
+>>>>>>> 8b8fba4d8c40dbfa3c8140080f61c1cd05793892
               {" "}
               <img src={images} alt={images.description} />{" "}
             </div>
