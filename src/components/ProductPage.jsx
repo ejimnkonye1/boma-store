@@ -45,12 +45,12 @@ const images = product.image || [];
         {" "}
         <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
         
-          {images.map((images, index) => (
-            <div key={index}>
+        
+            <div >
               {" "}
               <img src={images} alt={images.description} />{" "}
             </div>
-           ))}
+    
         </Carousel>{" "}
       </div>{" "}
       <div className="product-info">
