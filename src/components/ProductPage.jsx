@@ -30,7 +30,7 @@ const images = product.image || [];
       existingproduct.quantity += 1
       setCartItem([...cartItem])
     }else{
-      // add product to cary
+      // add product to cart
       product.quantity = 1
       setCartItem([...cartItem,product])
       console.log(cartItem)
@@ -44,18 +44,13 @@ const images = product.image || [];
       <div className="carousel-container">
         {" "}
         <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
-          {" "}
-<<<<<<< HEAD
-          {image.map((img, index) => (
+        
+          {images.map((images, index) => (
             <div key={index}>
-=======
-          
-            <div >
->>>>>>> 8b8fba4d8c40dbfa3c8140080f61c1cd05793892
               {" "}
               <img src={images} alt={images.description} />{" "}
             </div>
-          {" "}
+           ))}
         </Carousel>{" "}
       </div>{" "}
       <div className="product-info">
