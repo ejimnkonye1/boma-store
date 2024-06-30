@@ -24,17 +24,24 @@ const images = product.image || [];
   const Navigate = useNavigate()
   const handleAddToCart = () => {
     //check is product exist
-    const existingproduct = cartItem.find((item)=> item.name === product.price)
+    const existingproduct = cartItem.find((item)=> item.name === product.name)
     if (existingproduct){
       // if product in cart increase it quantity by 1
       existingproduct.quantity += 1
       setCartItem([...cartItem])
     }else{
       // add product to cart
-      product.quantity = 1
-      setCartItem([...cartItem,product])
+      const newItem = {
+        ...product,
+        quantity: quantity,
+      };
+      setCartItem([...cartItem,newItem])
       console.log(cartItem)
     }
+    // Navigate('/cart')
+  }
+  
+  const viewBut = () => {
     Navigate('/cart')
   }
 
@@ -57,7 +64,7 @@ const images = product.image || [];
         {" "}
         <h1 className="product-name">{product.name}</h1>{" "}
         <p className="product-price">₦{product.price}</p>{" "}
-        <p className="product-description">{product.description} </p>{" "}
+        <p className="product-description">{product.name} </p>{" "}
         
         <div className="quantity-selector">
           {" "}
@@ -79,21 +86,31 @@ const images = product.image || [];
       </div>{" "}
     
 
-<div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div className="offcanvas-header">
-    <h5 className="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <h5 className="offcanvas-title" id="offcanvasRightLabel">Cart Items</h5>
     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div className="offcanvas-body">
-    ...
-    {cartItem.map((item) => (
-      <div>
-      <p>{item.price}</p>
-      <p>{item.description}</p>
-      </div>
-    ))}
+  <div className="offcanvas-body d-flex flex-column justify-content-between">
+    <div>
+      {cartItem.map((item) => (
+        <div className="d-flex mb-3" key={item.id}>
+          <img src={item.image} width="100px" alt={item.name} />
+          <div className="p-2">
+          <p>{item.name} x {item.quantity}</p>
+            <h6>{item.price}</h6>
+            
+          
+          </div>
+        </div>
+      ))}
+    </div>
+    <div className="mt-auto">
+      <button className="btn btn-primary w-100" onClick={viewBut}>View cart</button>
+    </div>
   </div>
 </div>
+
 
     </div>
   );
