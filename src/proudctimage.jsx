@@ -11,65 +11,66 @@ import img10 from './assets/images/PHOTO-2024-05-07-11-16-43.jpg';
 
 const products = [
   {
-    id:0,
+    id: 0,
     image: img1,
-    description: "Bead",
-    price: "6,500"
+    name: "Bead",
+    price: 6500
   },
   {
-    id:1,
+    id: 1,
     image: img2,
-    description: "Male Necklace",
-    price: "12,000"
+    name: "Male Necklace",
+    price: 12000
   },
   {
-    id:2,
+    id: 2,
     image: img3,
-    description: "Casio watch",
-    price: "9,500"
+    name: "Casio watch",
+    price: 9500
   },
   {
-    id:3,
+    id: 3,
     image: img4,
-    description: "Tissot watch",
-    price: "13,500"
+    name: "Tissot watch",
+    price: 13500
   },
   {
-    id:4,
+    id: 4,
     image: img5,
-    description: "Female earring",
-    price: "2,500"
+    name: "Female earring",
+    price: 2500
   },
   {
-    id:5,
+    id: 5,
     image: img6,
-    description: "Unisex bracelet",
-    price: "5,000"
+    name: "Unisex bracelet",
+    price: 5000
   },
   {
-    id:6,
+    id: 6,
     image: img7,
-    description: "Hilfiger watch",
-    price: "25,500"
+    name: "Hilfiger watch",
+    price: 25500
   },
   {
-    id:7,
+    id: 7,
     image: img8,
-    description: "Demini Ladies watch",
-    price: "16,500"
+    name: "Demini Ladies watch",
+    price: 16500
   },
   {
-    id:8,
+    id: 8,
     image: img9,
-    description: "Male bracelet and necklace",
-    price: "18,000"
+    name: "Male bracelet and necklace",
+    price: 18000
   },
   {
-    id:9,
+    id: 9,
     image: img10,
-    description: "Female necklace",
-    price: "3,500"
+    name: "Female necklace",
+    price: 3500
   }
 ];
+
 
 export default products;

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import products from "../proudctimage"; // Check the spelling here, should it be 'productimage'?
 import menproducts from "../menimage";
+import "../css/Productdetails.css";
 const Details = () => {
 
   const { id } = useParams();

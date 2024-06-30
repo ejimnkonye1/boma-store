@@ -14,7 +14,7 @@ const ProductList = () => {
                 <img src={pro.image} className="card-img-top" height={'250px'} alt={pro.description} />
               </Link>
               <div className="card-body">
-                <h6 className="card-title">{pro.description}</h6>
+                <h6 className="card-title">{pro.name}</h6>
                 <p className="card-text">{pro.price}</p>
               </div>
             </div>
